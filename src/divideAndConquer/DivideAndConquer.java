@@ -2,6 +2,7 @@ package divideAndConquer;
 
 public class DivideAndConquer {
 
+    //摩尔投票法 求出现次数大于一半的元素
     public int majorityElement(int[] nums) {
         if(nums.length==0) return -1;
         int major = nums[0];

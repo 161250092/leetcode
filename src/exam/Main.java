@@ -1,3 +1,5 @@
+package exam;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -25,12 +27,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-       Test test = new Test();
 
-       char[] matrix = "A".toCharArray();
-       boolean a = test.hasPath(matrix,1,1,"A".toCharArray());
-
-       System.out.println(a);
 
     }
 

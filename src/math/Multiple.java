@@ -1,9 +1,11 @@
+package math;
+
 public class Multiple {
 
 
     public static void main(String[] args) {
 //            System.out.println((long)65535*(long)65535);
-//            System.out.println(new Multiple().multiply("65535","65535"));
+//            System.out.println(new math.Multiple().multiply("65535","65535"));
         System.out.println(new Multiple().RectCover(50));
     }
 

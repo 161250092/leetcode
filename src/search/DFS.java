@@ -1,10 +1,15 @@
+package search;
+
+
+import tree.TreeNode;
+
 import java.util.ArrayList;
 
 public class DFS {
     private ArrayList<ArrayList<Integer>> allLists = new ArrayList<>();
     private ArrayList<Integer> list = new ArrayList<>();
 
-    public ArrayList<ArrayList<Integer>> FindPath(TreeNode root,int target) {
+    public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
         if(root == null)  return allLists;
         list.add(root.val);
         target -=root.val;

@@ -1,3 +1,7 @@
+package thread;
+
+import exam.Main;
+
 public class MyThread implements Runnable {
 
     Main main;

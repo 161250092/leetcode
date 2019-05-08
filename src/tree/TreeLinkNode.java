@@ -1,3 +1,5 @@
+package tree;
+
 public class TreeLinkNode {
     int val;
     TreeLinkNode left = null;

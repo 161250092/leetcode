@@ -1,4 +1,4 @@
-package review;
+package thread;
 
 public class Child extends Father{
 

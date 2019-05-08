@@ -1,4 +1,7 @@
+package math;
+
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Back {
 
@@ -89,6 +92,73 @@ public class Back {
                 max = i;
         }
         return max;
+    }
+
+
+    public int FindGreatestSumOfSubArray(int[] array) {
+        if(array.length==1) return array[0];
+
+        int res = array[0];
+        int curMax = array[0];
+        for(int i=1;i<array.length;i++){
+            curMax = Math.max(curMax+array[i],array[i]);
+            res = Math.max(res,curMax);
+        }
+        return res;
+    }
+
+    public String PrintMinNumber(int [] numbers) {
+        int n;
+        ArrayList<Integer> list= new ArrayList<Integer>();
+        n=numbers.length;
+        for(int i=0;i<n;i++){
+            list.add(numbers[i]);
+        }
+        list.sort(new Comparator<Integer>() {
+
+            public int compare(Integer str1, Integer str2) {
+                String s1 = str1 + "" + str2;
+                String s2 = str2 + "" + str1;
+                return s1.compareTo(s2);
+            }
+        });
+
+
+        StringBuilder s= new StringBuilder();
+        for(int j:list){
+            s.append(j);
+        }
+        return s.toString();
+
+    }
+
+    public int GetUglyNumber_Solution(int index) {
+        return 0;
+    }
+
+    public int FirstNotRepeatingChar(String str) {
+        char[] chars = str.toCharArray();
+        for(int i=0;i<chars.length;i++){
+            int count = 0;
+            int target = chars[i];
+            for(int j=0;j<chars.length;j++){
+                if(chars[j]==target)
+                    count++;
+            }
+            if(count == 1)
+                return i;
+        }
+        return -1;
+    }
+
+    public int GetNumberOfK(int [] array , int k) {
+        int count = 0;
+        for(int i=0;i<array.length;i++) {
+            if (array[i] == k)
+                count++;
+
+        }
+        return count;
     }
 
 

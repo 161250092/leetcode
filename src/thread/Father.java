@@ -1,6 +1,4 @@
-package review;
-
-import java.io.IOException;
+package thread;
 
 public class Father extends Thread{
 
