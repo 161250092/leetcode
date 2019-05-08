@@ -477,6 +477,15 @@ public class TreeNode {
         return cost;
     }
 
+
+    /**
+     * Leetcode 669
+     * @param root
+     * @param L
+     * @param R
+     * @return
+     */
+
     public TreeNode trimBST(TreeNode root, int L, int R) {
         while(root.val<L||root.val>R){
             if(root.val<L)
@@ -520,61 +529,12 @@ public class TreeNode {
         }
     }
 
-    
-//    int res=0;
-//    public int distributeCoins(TreeNode root) {
-//        if(root == null)
-//            return 0;
-//
-//        pre_Order(root,true);
-//        if(root.val==0)
-//            res++;
-//        return res;
-//    }
-//
-//    public void pre_Order(TreeNode node,boolean isRoot){
-//        if(node==null)
-//            return;
-//
-//        vlr(node,isRoot);
-//        res +=count;
-//        count = 0;
-//
-//        pre_Order(node.left,true);
-//        pre_Order(node.right,true);
-//    }
-//
-//
-//    //数节点的子节点数量
-//    int count=0;
-//    public void vlr(TreeNode node,boolean isRoot){
-//        if(node==null)
-//            return;
-//        if(!isRoot)
-//            count++;
-//        vlr(node.left,false);
-//        vlr(node.right,false);
-//    }
-//
-//
-//
-//
-//    public int countChildNode(TreeNode node,int childNodeNum){
-//        if(node == null)
-//            return childNodeNum;
-//
-//        int num = 0;
-//        if(node.left!=null) {
-//            childNodeNum++;
-//            num +=countChildNode(node.left,childNodeNum);
-//        }
-//        if(node.right!=null){
-//            childNodeNum++;
-//            num +=countChildNode(node.right,childNodeNum);
-//        }
-//
-//        return num;
-//    }
+
+    /**
+     * leetcode 429
+     */
+
+
 
 }
 
