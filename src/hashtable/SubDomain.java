@@ -46,4 +46,37 @@ public class SubDomain {
 	        String[] answer = new String[res.size()];
 	        return res.toArray(answer);
 		}
+
+
+	public int islandPerimeter(int[][] grid) {
+		int perimeter = 0;
+
+		for(int i=0;i<grid.length;i++){
+			for(int j=0;j<grid[0].length;j++){
+				if(grid[i][j]==1)
+					perimeter +=countPerimeter(grid,i,j);
+			}
+		}
+		return perimeter;
+	}
+
+	private int countPerimeter(int[][] grid,int x,int y){
+	 	int res = 0;
+
+	 	if(x-1<0) res++;
+	 	if(y-1<0) res++;
+	 	if(x+1==grid.length) res++;
+	 	if(y+1==grid[0].length) res++;
+
+	 	if(x-1>=0&&grid[x-1][y]==0) res++;
+	 	if(x+1<grid.length&&grid[x+1][y]==0) res++;
+	 	if(y-1>=0&&grid[x][y-1]==0)res++;
+	 	if(y+1<grid[0].length&&grid[x][y+1]==0) res++;
+
+	 	return res;
+
+	}
+
+
+
 }
